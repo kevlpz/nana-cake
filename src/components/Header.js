@@ -1,8 +1,11 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
-const Header = () =>{
+const Header = () => {
     return (
-        <h3>nav</h3>
+        <div className="header-container">
+            <img src={logo} className="logo" alt="Nana Logo"/>
+        </div>
     )
 }
 
