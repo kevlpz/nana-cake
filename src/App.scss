@@ -1,16 +1,19 @@
 .header-container {
   background: red;
   height: 100px;
-  display: flex
-
-  h2 {
-    margin: 0;
-  }
+  display: flex;
+  justify-content: space-between;
 
   .logo {
     width: 70px;
     height: 70px;
     // background: blue;
-    margin: 20px 5px;
+    margin: auto 7px;
+  }
+
+  .menu-button {
+    color: white;
+    font-size: 50px;
+    margin: auto 5px;
   }
 }
