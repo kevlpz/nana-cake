@@ -6,6 +6,7 @@ const Header = () => {
     return (
         <div className="header-container">
             <img src={logo} className="logo" alt="Nana Logo" />
+
             <div className="menu-button" onClick={() => console.log('clicked!')}>
                 <GoThreeBars />
             </div>
