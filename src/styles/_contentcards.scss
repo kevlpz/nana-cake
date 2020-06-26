@@ -8,5 +8,9 @@
         background: $secondary;
         // border-color: white;
         border: 3px solid white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

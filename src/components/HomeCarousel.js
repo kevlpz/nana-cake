@@ -6,6 +6,8 @@ import logo from '../assets/logo.png';
 import pasta from '../assets/pasta.jpg'
 
 const HomeCarousel = () => {
+
+
   return (
     <Carousel>
       <Carousel.Item>
