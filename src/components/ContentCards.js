@@ -4,19 +4,27 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ContentCard from './ContentCard';
 import logo from '../assets/logo.png';
+import {
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const cardContent = {
     card1: {
         title: 'Crochet',
-        img: logo
+        img: logo,
+        url: '/crochet'
     },
     card2: {
         title: 'Stickers',
-        img: logo
+        img: logo,
+        url: '/stickers'
     },
     card3: {
         title: 'Buttons',
-        img: logo
+        img: logo,
+        url: '/buttons'
     },
 }
 
