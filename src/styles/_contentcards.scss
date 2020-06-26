@@ -1,0 +1,12 @@
+@import './variables';
+
+.content-cards-container {
+    background: $secondary;
+    max-width: 600px;
+
+    .content-card {
+        background: $secondary;
+        // border-color: white;
+        border: 3px solid white;
+    }
+}

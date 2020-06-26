@@ -10,7 +10,9 @@ const Header = () => {
             <Navbar.Brand>
                 <img src={logo} className="logo" alt="Nana Logo" />
             </Navbar.Brand>
-            <Navbar.Toggle className="nav-toggle"><GoThreeBars /></Navbar.Toggle>
+            <Navbar.Toggle className="nav-toggle">
+                <GoThreeBars />
+            </Navbar.Toggle>
             <Navbar.Collapse>
                 <Nav className="ml-auto">
                     <Nav.Link href="#products">Products</Nav.Link>

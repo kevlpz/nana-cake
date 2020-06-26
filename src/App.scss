@@ -1,3 +1,10 @@
+@import './styles/variables';
 @import "~bootstrap/scss/bootstrap";
 @import './styles/header';
+@import './styles//contentcards';
 @import './styles/footer';
+
+.App {
+    background: $secondary;
+    color: white;
+}

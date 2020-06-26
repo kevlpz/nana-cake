@@ -2,11 +2,13 @@ import React from 'react';
 import './App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ContentCards from './components/ContentCards';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <ContentCards />
       <Footer />
     </div>
   );
