@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Crochet from './components/Crochet';
+import Stickers from './components/Stickers';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/crochet" component={Crochet} />
+        <Route path="/stickers" component={Stickers} />
       </Switch>
 
       <Footer />
