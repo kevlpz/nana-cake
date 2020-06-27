@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Crochet from './components/Crochet';
 import Stickers from './components/Stickers';
+import Buttons from './components/Buttons';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/crochet" component={Crochet} />
         <Route path="/stickers" component={Stickers} />
+        <Route path="/buttons" component={Buttons} />
       </Switch>
 
       <Footer />
