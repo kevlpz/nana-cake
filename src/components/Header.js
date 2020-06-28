@@ -3,12 +3,15 @@ import logo from '../assets/logo.png';
 import { GoThreeBars } from "react-icons/go";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <Navbar className="navbar" expand="lg">
             <Navbar.Brand>
-                <img src={logo} className="logo" alt="Nana Logo" />
+                <Link to='/' >
+                    <img src={logo} className="logo" alt="Nana Logo" />
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle className="nav-toggle">
                 <GoThreeBars />

@@ -1,8 +1,9 @@
 @import './styles/variables';
 @import "~bootstrap/scss/bootstrap";
 @import './styles/header';
-@import './styles//contentcards';
+@import './styles/home';
 @import './styles/footer';
+@import './styles/product-collection';
 
 .App {
     background: $secondary;

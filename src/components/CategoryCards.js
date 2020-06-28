@@ -2,42 +2,37 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ContentCard from './ContentCard';
+import CategoryCard from './CategoryCard';
 import logo from '../assets/logo.png';
-import {
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
 
-const cardContent = {
-    card1: {
+const categories = {
+    crochet: {
         title: 'Crochet',
         img: logo,
         url: '/crochet'
     },
-    card2: {
+    stickers: {
         title: 'Stickers',
         img: logo,
         url: '/stickers'
     },
-    card3: {
+    buttons: {
         title: 'Buttons',
         img: logo,
         url: '/buttons'
     },
 }
 
-const ContentCards = () => {
+const CategoryCards = () => {
     return (
         <Container className="content-cards-container mx-6">
             <Row xs={1} md={3} lg={3}>
-                <ContentCard content={cardContent.card1} />
-                <ContentCard content={cardContent.card2} />
-                <ContentCard content={cardContent.card3} />
+                <CategoryCard content={categories.crochet} />
+                <CategoryCard content={categories.stickers} />
+                <CategoryCard content={categories.buttons} />
             </Row>
         </Container>
     )
 }
 
-export default ContentCards;
+export default CategoryCards;

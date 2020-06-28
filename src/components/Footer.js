@@ -2,6 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+import Home from '../components/Home';
 import { FaFacebookSquare, FaTwitterSquare, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -23,7 +25,9 @@ const Footer = () => {
                             <h3>Follow</h3>
                         <Row >
                             <Col>
-                                <FaFacebookSquare />
+                                <Link to={Home} >
+                                    <FaFacebookSquare />
+                                </Link>
                             </Col>
                             <Col>
                                 <FaTwitterSquare />
