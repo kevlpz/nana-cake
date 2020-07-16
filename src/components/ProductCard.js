@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const ProductCard = (props) => {
-    const { title, img, url } = props.content;
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const { name, url, description } = props.content;
+    
     return (
-        <Container>
-            <Card className="product-card my-3">
-                <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                </Card.Body>
-            </Card>
-        </Container>
+        <>
+            <Container>
+                <Card className="product-card my-3" onClick={handleShow}>
+                    <Card.Img variant="top" src={url} />
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                    </Card.Body>
+                </Card>
+            </Container>
+
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{name}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {description}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
     )
 }
 

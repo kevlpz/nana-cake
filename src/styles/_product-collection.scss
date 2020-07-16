@@ -3,4 +3,8 @@
 .product-card {
     background: $secondary;
     border: 3px solid white;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
