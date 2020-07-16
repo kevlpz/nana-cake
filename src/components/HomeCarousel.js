@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import danny from '../assets/danny.jpg';
 import splashing from '../assets/splashing.png';
-import logo from '../assets/logo.png';
 import pasta from '../assets/pasta.jpg'
 
 const HomeCarousel = () => {
