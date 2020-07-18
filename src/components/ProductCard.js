@@ -11,13 +11,12 @@ const ProductCard = (props) => {
     const handleShow = () => setShow(true);
 
     const { name, description } = props.product;
-    console.log(props.photos);
     
     return (
         <>
             <Container>
                 <Card className="product-card my-3" onClick={handleShow}>
-                    <Card.Img variant="top" src={props.photos[0].url} />
+                    {/* <Card.Img variant="top" src={props.photos[0].url} /> */}
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                     </Card.Body>

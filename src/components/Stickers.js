@@ -135,7 +135,7 @@ const Stickers = props => {
     const { products, photos } = data;
     return (
         <Container>
-            <Row xs={2} md={4} lg={6} className="justify-content-start">
+            <Row xs={1} sm={2} md={3} lg={4} className="justify-content-start">
                 {products.map(product => {
                     return (
                         <Col key={product.id}>

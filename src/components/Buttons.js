@@ -1,123 +1,122 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
-import logo from '../assets/logo.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Axios from 'axios';
 
-const content = [
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-    {
-        title: 'buttons',
-        img: logo,
-        url: 'buttons-link'
-    },
-]
+// const content = [
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+//     {
+//         title: 'buttons',
+//         img: logo,
+//         url: 'buttons-link'
+//     },
+// ]
 
 const Buttons = props => {
     const [data, setData] = useState({
@@ -136,7 +135,7 @@ const Buttons = props => {
     const { products, photos } = data;
     return (
         <Container>
-            <Row xs={2} md={4} lg={6} className="justify-content-start">
+            <Row xs={1} sm={2} md={3} lg={4} className="justify-content-start">
                 {products.map(product => {
                     return (
                         <Col key={product.id}>
