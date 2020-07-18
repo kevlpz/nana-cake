@@ -119,24 +119,27 @@ import Axios from 'axios';
 // ]
 
 const Stickers = props => {
-    const [products, setProducts] = useState([])
+    const [data, setData] = useState({
+        products: [],
+        photos: []
+    });
 
     useEffect(() => {
         Axios.get('http://localhost:5000/products/stickers')
             .then(res => {
-                console.log(res)
-                setProducts(res.data)
+                setData(res.data);
             })
             .catch(err => console.log(err));
     }, []);
 
+    const { products, photos } = data;
     return (
         <Container>
             <Row xs={2} md={4} lg={6} className="justify-content-start">
                 {products.map(product => {
                     return (
                         <Col key={product.id}>
-                            <ProductCard content={product} />
+                            <ProductCard product={product} photos={photos.filter(photo => photo.productID === product.id)} />
                         </Col>
                     )
                 })}
