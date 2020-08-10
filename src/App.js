@@ -8,6 +8,8 @@ import Register from './components/Register';
 import Crochet from './components/Crochet';
 import Stickers from './components/Stickers';
 import Buttons from './components/Buttons';
+import AllProducts from './components/AllProducts';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/crochet" component={Crochet} />
         <Route path="/stickers" component={Stickers} />
         <Route path="/buttons" component={Buttons} />
+        <Route path="/products" component={AllProducts} />
+        <Route path="/login" component={Login} />
       </Switch>
 
       <Footer />

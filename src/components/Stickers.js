@@ -125,11 +125,15 @@ const Stickers = props => {
     });
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/products/stickers')
-            .then(res => {
-                setData(res.data);
-            })
-            .catch(err => console.log(err));
+        Axios({
+            method: 'get',
+            url: 'http://localhost:5000/products/stickers',
+            withCredentials: true
+        })
+        .then(res => {
+            setData(res.data);
+        })
+        .catch(err => console.log(err));
     }, []);
 
     const { products, photos } = data;

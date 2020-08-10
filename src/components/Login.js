@@ -6,22 +6,34 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Axios from 'axios';
 
-const Register = props => {
+const Login = props => {
+    if(localStorage.getItem('user')) props.history.push('/');
+
     const handleSubmit = e => {
         e.preventDefault();
-        const newUser = {
+        const user = {
             username: document.querySelector('#formBasicUsername').value,
             password: document.querySelector('#formBasicPassword').value
         }
-        Axios.post('http://localhost:5000/users/register', newUser)
+
+        Axios({
+            method: 'post',
+            url: 'http://localhost:5000/users/login',
+            data: user,
+            withCredentials: true
+        })
             .then(res => {
                 document.querySelector('#formBasicUsername').value = '';
                 document.querySelector('#formBasicPassword').value = '';
+                console.log(res.data);
+                localStorage.setItem('user', JSON.stringify(res.data));
                 props.history.push('/')
+                window.location.reload();
             })
             .catch(err => console.log(err));
     }
-    
+
+
     return (
         <Container className="d-flex justify-content-center pt-3">
             <Row xs={1} sm={1} md={1} lg={1} xl={1}>
@@ -44,7 +56,8 @@ const Register = props => {
                 </Col>
             </Row>
         </Container>
+
     )
 }
 
-export default Register;
+export default Login;

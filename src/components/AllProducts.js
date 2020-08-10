@@ -162,22 +162,18 @@ import Axios from 'axios';
 //     },
 // ]
 
-const Crochet = props => {
+const AllProducts = props => {
     const [data, setData] = useState({
         products: [],
         photos: []
     });
 
     useEffect(() => {
-        Axios({
-            method: 'get',
-            url: 'http://localhost:5000/products/crochet',
-            withCredentials: true
-        })
-        .then(res => {
-            setData(res.data);
-        })
-        .catch(err => console.log(err));
+        Axios.get('http://localhost:5000/products')
+            .then(res => {
+                setData(res.data);
+            })
+            .catch(err => console.log(err));
     }, []);
 
     const { products, photos } = data;
@@ -196,4 +192,4 @@ const Crochet = props => {
     )
 }
 
-export default Crochet;
+export default AllProducts;
