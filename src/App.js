@@ -10,7 +10,7 @@ import Stickers from './components/Stickers';
 import Buttons from './components/Buttons';
 import AllProducts from './components/AllProducts';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard';
 
 function App() {
   return (

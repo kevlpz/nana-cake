@@ -7,15 +7,12 @@ import Modal from 'react-bootstrap/Modal';
 const ProductCard = (props) => {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     const { name, description } = props.product;
     
     return (
         <>
             <Container>
-                <Card className="product-card my-3" onClick={handleShow}>
+                <Card className="product-card my-3" onClick={() => setShow(true)}>
                     {/* <Card.Img variant="top" src={props.photos[0].url} /> */}
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
@@ -24,7 +21,7 @@ const ProductCard = (props) => {
             </Container>
 
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>{name}</Modal.Title>
                 </Modal.Header>
@@ -32,10 +29,10 @@ const ProductCard = (props) => {
                     {description}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={() => setShow(false)}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={() => setShow(false)}>
                         Save Changes
                     </Button>
                 </Modal.Footer>

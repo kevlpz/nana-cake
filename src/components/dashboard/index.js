@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
+import Products from './Products';
 
 const Dashboard = () => {
     return (
@@ -26,7 +27,7 @@ const Dashboard = () => {
                             <p>You can check out anytime you like</p>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                            <p>but you can never leave</p>
+                            <Products />
                         </Tab.Pane>
                     </Tab.Content>
                 </Col>
