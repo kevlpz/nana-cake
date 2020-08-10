@@ -10,6 +10,7 @@ import Stickers from './components/Stickers';
 import Buttons from './components/Buttons';
 import AllProducts from './components/AllProducts';
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/buttons" component={Buttons} />
         <Route path="/products" component={AllProducts} />
         <Route path="/login" component={Login} />
+        <Route path="/dashboard" component={Dashboard} />
       </Switch>
 
       <Footer />

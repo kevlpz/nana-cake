@@ -26,7 +26,7 @@ const Login = props => {
                 document.querySelector('#formBasicUsername').value = '';
                 document.querySelector('#formBasicPassword').value = '';
                 console.log(res.data);
-                localStorage.setItem('user', JSON.stringify(res.data));
+                localStorage.setItem('user', true);
                 props.history.push('/')
                 window.location.reload();
             })
