@@ -8,18 +8,19 @@ import ProductCard from '../ProductCard';
 const Products = () => {
     const [data, setData] = useState({products: [], photos: []});
 
-    useEffect(async () => {
-        const res = await axios({
+    useEffect(() => {
+        axios({
             method: 'get',
             url: 'http://localhost:5000/products',
             withCredentials: true
-        });
-        setData(res.data);
+        })
+            .then(res => setData(res.data))
+            .catch(err => console.log(err));
     }, []);
         
     return(
-        <Container>
-            <Row xs={1} sm={2} md={3} lg={4} className="justify-content-start">
+        <Container className="mx-auto">
+            <Row xs={2} sm={2} md={3} lg={4} className="justify-content-start">
                 {data.products.map(product => {
                     return (
                         <Col key={product.id}>
