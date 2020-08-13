@@ -4,10 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-const ProductCard = (props) => {
+const ProductCard = props => {
     const [show, setShow] = useState(false);
 
-    const { name, description } = props.product;
+    const { name, description, id } = props.product;
+
+    let deleteButton
+    if(props.mode === 'admin') {
+        deleteButton = <Button variant="primary" onClick={() => props.handleDelete(id)}>Delete</Button>
+    }
     
     return (
         <>
@@ -35,6 +40,7 @@ const ProductCard = (props) => {
                     <Button variant="primary" onClick={() => setShow(false)}>
                         Save Changes
                     </Button>
+                    {deleteButton}
                 </Modal.Footer>
             </Modal>
         </>

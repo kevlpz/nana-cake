@@ -5,7 +5,7 @@ import HomeCarousel from './HomeCarousel';
 const Home = () => {
     return (
         <>
-            <HomeCarousel />
+            {/* <HomeCarousel /> */}
             <CategoryCards />
         </>
     )
