@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Products from './Products';
+import Account from './Account';
 
 const Dashboard = () => {
     return (
@@ -24,7 +25,7 @@ const Dashboard = () => {
                 <Col sm={9}>
                     <Tab.Content>
                         <Tab.Pane eventKey="first">
-                            <p>You can check out anytime you like</p>
+                            <Account />
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
                             <Products />
