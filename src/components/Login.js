@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Axios from 'axios';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from 'react';
 
 const Login = props => {
-    if(localStorage.getItem('user')) props.history.push('/');
+    // if(localStorage.getItem('user')) props.history.push('/');
+    const { user } = useContext(UserContext)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -27,13 +30,15 @@ const Login = props => {
                 document.querySelector('#formBasicPassword').value = '';
                 console.log(res.data);
                 localStorage.setItem('user', true);
-                props.history.push('/')
+                props.history.push('/');
                 window.location.reload();
             })
             .catch(err => console.log(err));
     }
 
-
+    if(user) {
+        return <Redirect to="/" />
+    }
     return (
         <Container className="d-flex justify-content-center pt-3">
             <Row xs={1} sm={1} md={1} lg={1} xl={1}>
@@ -56,7 +61,6 @@ const Login = props => {
                 </Col>
             </Row>
         </Container>
-
     )
 }
 

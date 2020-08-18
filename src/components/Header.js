@@ -17,8 +17,7 @@ const Header = () => {
         localStorage.clear();
         window.location.reload();
     }
-
-    console.log(localStorage.getItem('user'));
+    
     const isLoggedIn = localStorage.getItem('user');
 
     return (

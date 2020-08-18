@@ -7,8 +7,9 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 
 const ChangePassword = () => {
-
-    const handleSubmit = () => {
+    
+    const handleSubmit = e => {
+        e.preventDefault();
         const passwords = {
             oldPass: document.querySelector('.old-pass').value,
             newPass: document.querySelector('.new-pass').value,
@@ -17,7 +18,7 @@ const ChangePassword = () => {
 
         axios({
             method: 'put',
-            url: 'https://localhost:5000/users/:id',
+            url: 'http://localhost:5000/users/:id',
             data: passwords,
             withCredentials: true
         })
